@@ -114,9 +114,9 @@ public class Main {
             //Grade based on age
             GradeType grade= null;
             try {
-                determineGradeBasedOnAge(student_age);
+                grade = determineGradeBasedOnAge(student_age);
             }catch (NoSchoolAvailableForThisAgeException e){
-                System.out.println("Incorrect Age. Age should be between 4 and 17 ");
+                System.out.println("Incorrect Age.");
             }
 
             //School based on Grade
