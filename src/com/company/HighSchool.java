@@ -7,16 +7,17 @@ public class HighSchool extends SchoolClass {
     public Double chargeFees(Student student) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
-        if (grade.equals("9")) {
+        if (student.getGrade().toString().equals("GRADE9")) {
             fee = 100 * 2.00;
-
-        } else if (grade.equals("10")) {
+        }
+        else if (student.getGrade().toString().equals("GRADE10")) {
             fee = (100 * 2.00) + (100 * 2.00) * 0.45;
-        } else if (grade.equals("11")) {
+        } else if (student.getGrade().toString().equals("GRADE11")) {
             fee = ((100 * 2.00) + (100 * 2.00) * 0.45) + (((100 * 2.00) + (100 * 2.00) * 0.45) * 0.45);
-        } else if (grade.equals("12")) {
+        } else if (student.getGrade().toString().equals("GRADE12")) {
             fee = (((100 * 2.00) + (100 * 2.00) * 0.45) + (((100 * 2.00) + (100 * 2.00) * 0.45) * 0.45)) + (((100 * 2.00) + (100 * 2.00) * 0.45) + (((100 * 2.00) + (100 * 2.00) * 0.45) * 0.45)) * 0.45;
         }
+
         return Double.valueOf(decimalFormat.format(fee));
     }
 }
